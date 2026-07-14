@@ -2,6 +2,11 @@
 
 This guide will help you get started with Distrobox - a powerful tool that creates containerized sandboxes tightly integrated with your host system. Think of it as a lightweight, disposable development environment that feels native on your Linux machine.
 
+> **Audience:** Linux users who want lightweight, disposable development environments without virtual machines.
+> **Use Case:** Create and manage containerized sandboxes that integrate seamlessly with your host system.
+> **Prerequisites:** Linux (Ubuntu, Fedora, Arch, or similar), Podman or Docker installed, and `sudo` access.
+> **Last Updated:** July 2026 – verified with Distrobox 1.7+ and Podman 4.0.
+
 ---
 
 ## Overview
@@ -12,7 +17,7 @@ In this guide, you'll learn to:
 - Enter and use the container
 - Exit and manage containers
 
-**Time to complete:** ~10 minutes (plus initial setup time)
+Time to complete: ~10 minutes (plus initial setup time)
 
 ---
 
@@ -20,9 +25,9 @@ In this guide, you'll learn to:
 
 Before you begin, make sure you have:
 
-- **Linux** (any distribution—Ubuntu, Fedora, Arch, etc.)
-- **Podman or Docker** installed on your system
-- A user account with **sudo** privileges
+- Linux (any distribution—Ubuntu, Fedora, Arch, etc.)
+- Podman or Docker installed on your system
+- A user account with sudo privileges
 
 > **Tip:** Distrobox works with both Podman and Docker. If you don't have either, install Podman first. Podman is preferred for rootless containers on Linux.
 
@@ -72,7 +77,7 @@ Once the image is downloaded and the container is created, enter it:
 distrobox-enter my-devbox
 ```
 
-Your terminal prompt may change, indicating you're now inside the container. You'll may also see the container name in your prompt, like `user@my-devbox:/$`. If not, you can check in the next step.
+Your terminal prompt may change, indicating you're now inside the container. You may also see the container name in your prompt, like `user@my-devbox:/$`. If not, you can check in the next step.
 
 > **Important:** Inside the container, your home directory is automatically mounted and shared with your host system. Files you create here appear on your host, and vice versa.
 
@@ -89,7 +94,8 @@ cat /etc/os-release
 # Check that your home directory is synced
 ls ~
 ```
-> **Note:** `ls ~` will show your host’s home directory contents because Distrobox shares it by default. If you see your usual files, the mount is working.
+
+`ls ~` will show your host’s home directory contents because Distrobox shares it by default. If you see your usual files, the mount is working.
 
 Now open a new terminal on your host machine and list out your containers:
 
@@ -124,10 +130,9 @@ You're now back on your host system.
 
 Now that you have a working container, you can:
 
-- **Install development tools** inside the container (Node.js, Python, Go, etc.)
-- **Create multiple containers** for different projects or distributions
-- **Export applications** so they appear in your system application menu
-- **Learn about `distrobox-init`** to customize your container environment
+- Install development tools inside the container (Node.js, Python, Go, etc.)
+- Create multiple containers for different projects or distributions
+- Export applications so they appear in your system application menu
 
 ---
 
