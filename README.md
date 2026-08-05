@@ -1,12 +1,15 @@
 # Technical Writing Portfolio
 
 **Author:** John Tran
+
 **Email:** jtran4481@gmail.com
+
 **Focus:** Developer Documentation | API Docs | Technical Guides
 
 Welcome to my technical writing portfolio. I write docs that help developers get work done.
 
 This repository contains two samples that each demonstrating a different type of developer documentation
+
 ---
 
 ## 1. Getting Started with Distrobox
