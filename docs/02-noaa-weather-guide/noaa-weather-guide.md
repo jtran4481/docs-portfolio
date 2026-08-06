@@ -27,7 +27,7 @@ We’ll use Boise, Idaho (lat `43.6150`, lon `-116.2023`) as our running example
 
 ---
 
-## Step 1: Convert Coordinates to a Grid Point
+## Convert Coordinates to a Grid Point
 
 The NWS API organizes weather data by grid points, not arbitrary coordinates. You must first transform your latitude/longitude into a grid point via the `/points` endpoint.
 
@@ -73,7 +73,7 @@ The API returns a large JSON object. The most important parts are:
 
 ---
 
-## Step 2: Fetch the 7‑Day Forecast
+## Fetch the 7‑Day Forecast
 
 Now that you have the `forecast` URL from Step 1, make a second request to retrieve the detailed weather data.
 

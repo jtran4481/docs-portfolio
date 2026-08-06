@@ -33,7 +33,7 @@ Before you begin, make sure you have:
 
 ---
 
-## Step 1: Install Distrobox
+## Install Distrobox
 
 Open your terminal and run the following command depending on your distribution:
 
@@ -50,7 +50,7 @@ sudo pacman -S podman distrobox
 
 ---
 
-## Step 2: Create Your First Container
+## Create Your First Container
 
 Now it's time to create a container. We'll use a common base image, such as Ubuntu:
 
@@ -67,7 +67,7 @@ This command:
 
 ---
 
-## Step 3: Enter Your Container
+## Enter Your Container
 
 Once the image is downloaded and the container is created, enter it:
 
@@ -83,7 +83,7 @@ Your terminal prompt may change, indicating you're now inside the container. You
 
 ---
 
-## Step 4: Verify Everything Works
+## Verify Everything Works
 
 Inside the container, check that it's working properly:
 
@@ -106,7 +106,7 @@ distrobox list
 
 ---
 
-## Step 5: Exit and Manage Your Container
+## Exit and Manage Your Container
 
 To exit the container and return to your host, go back to the terminal with your container running and enter:
 
