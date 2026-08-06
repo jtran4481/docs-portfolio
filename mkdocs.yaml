@@ -1,0 +1,10 @@
+site_name: Documentation Portfolio
+theme:
+  name: readthedocs
+
+
+nav:
+nav:
+  - Home: index.md
+  - Distrobox Quickstart: 01-distrobox-quickstart/distrobox-quickstart.md
+  - NOAA Weather Guide: 02-noaa-weather-guide/noaa-weather-guide.md
