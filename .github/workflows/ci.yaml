@@ -21,9 +21,11 @@ jobs:
         uses: vale-cli/vale-action@v3
         with:
           files: docs/
+          styles_path: styles
           fail_on_error: true
           filter_mode: added
           minAlertLevel: error
+          reporter: github-check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
