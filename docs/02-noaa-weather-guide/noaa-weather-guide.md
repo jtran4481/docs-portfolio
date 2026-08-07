@@ -42,8 +42,8 @@ curl -X GET "https://api.weather.gov/points/43.6150,-116.2023" \
 
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
-| `latitude` | Float (decimal) | Latitude in decimal degrees (e.g., `43.6150`). |
-| `longitude` | Float (decimal) | Longitude in decimal degrees (e.g., `-116.2023`). |
+| `latitude` | Float (decimal) | Latitude in decimal degrees (for example, `43.6150`). |
+| `longitude` | Float (decimal) | Longitude in decimal degrees (for example, `-116.2023`). |
 
 > **Caution:** The NWS API uses a strict comma‑separated format (`lat,lon`). Do **not** use semicolons or spaces or these will return a `400 Bad Request` error.
 
@@ -138,7 +138,7 @@ The `periods` array contains the forecast broken down into 12‑hour segments (d
 
 **Key fields to parse:**
 
-- `name` – e.g., "Today", "Tonight", "Monday".
+- `name` – for example, `Today`, `Tonight`, `Monday`.
 - `temperature` and `temperatureUnit` – high/low for that period.
 - `windSpeed` and `windDirection` – useful for travel or outdoor planning.
 - `shortForecast` and `detailedForecast` – human‑readable summaries.
@@ -152,9 +152,9 @@ Even though the API is free, these issues often trip up first‑time users. Here
 | Status Code | Problem | Solution |
 | :--- | :--- | :--- |
 | `403 Forbidden` | **Missing User-Agent:** The NWS requires a valid User-Agent header. | Add `-H "User-Agent: YourApp/1.0 (your@email.com)"` to every request. |
-| `400 Bad Request` | **Malformed Coordinates:** Latitude/longitude format is incorrect. | Ensure you use `lat,lon` (e.g., `43.6150,-116.2023`). No spaces! |
+| `400 Bad Request` | **Malformed Coordinates:** Latitude/longitude format is incorrect. | Ensure you use `lat,lon` (for example, `43.6150,-116.2023`). No spaces. |
 | `404 Not Found` | **Out of Bounds:** The coordinates are outside the US or its territories. | Verify the location is within the contiguous US, Alaska, Hawaii, or Puerto Rico. |
-| `500 Internal Server Error` | **Temporary API issue:** The NWS service is occasionally unreliable. | Implement a retry policy (e.g., wait 5 seconds and try again). |
+| `500 Internal Server Error` | **Temporary API issue:** The NWS service is occasionally unreliable. | Implement a retry policy (for example, wait 5 seconds and try again). |
 
 ### Rate Limiting & Caching
 
@@ -170,7 +170,7 @@ While the NWS does not publish strict rate limits, they encourage responsible us
 Now that you have the forecast JSON, here are some common integrations:
 
 - Parse and display – Extract temperature, wind, and conditions to show in a mobile or web dashboard.
-- Trigger alerts – Check for severe weather keywords (e.g., "Thunderstorm", "Heavy Rain") and send notifications.
+- Trigger alerts – Check for severe weather keywords (for example, `Thunderstorm`, `Heavy Rain`) and send notifications.
 - Combine with other data – Feed temperature into agricultural models or travel route planners.
 - Store for analytics – Archive daily forecasts to compare with actual conditions later.
 
