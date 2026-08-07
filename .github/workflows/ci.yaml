@@ -24,7 +24,7 @@ jobs:
           styles_path: styles
           fail_on_error: true
           filter_mode: added
-          minAlertLevel: error
+          min_alert_level: error
           reporter: github-check
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
