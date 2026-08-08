@@ -1,11 +1,11 @@
-# Quick Start: Getting Started With Your First Distrobox Container on Linux
+# Quick start - Getting started with your first Distrobox container on Linux
 
-This guide will help you get started with Distrobox - a powerful tool that creates containerized sandboxes tightly integrated with your host system. Think of it as a lightweight, disposable development environment that feels native on your Linux machine.
+This guide helps you get started with Distrobox - a powerful tool that creates containerized sandboxes tightly integrated with your host system. Think of it as a lightweight, disposable development environment that feels native on your Linux machine.
 
 > **Audience:** Linux users who want lightweight, disposable development environments without virtual machines.
-> **Use Case:** Create and manage containerized sandboxes that integrate seamlessly with your host system.
+> **Use Case:** create and manage containerized sandboxes that integrate seamlessly with your host system.
 > **Prerequisites:** Linux (Ubuntu, Fedora, Arch, or similar), Podman or Docker installed, and `sudo` access.
-> **Last Updated:** July 2026 – verified with Distrobox 1.7+ and Podman 4.0.
+> **Last Updated:** this guide was verified in August 2026 with Distrobox 1.8.1.2 and Podman 5.4.2.
 
 ---
 
@@ -50,9 +50,9 @@ sudo pacman -S podman distrobox
 
 ---
 
-## Create Your First Container
+## Create your first container
 
-Now it's time to create a container. We'll use a common base image, such as Ubuntu:
+Next, create a container using a common base image, such as Ubuntu:
 
 ```bash
 distrobox-create --name my-devbox --image ubuntu:latest
@@ -61,17 +61,17 @@ distrobox-create --name my-devbox --image ubuntu:latest
 This command:
 - Creates a container named `my-devbox`
 - Uses the latest Ubuntu image as the base
-- This first download **will take several minutes** depending on your internet speed
+- This first download **can take several minutes** depending on your internet speed
 
-> **Tip:** Prefer Fedora or Arch Linux? Replace `ubuntu:latest` with `fedora:latest` or `archlinux:latest`. Check the [official Distrobox docs](https://github.com/89luca89/distrobox) for the full list of supported base images.
+> **Tip:** if you prefer Fedora or Arch Linux, replace `ubuntu:latest` with `fedora:latest` or `archlinux:latest`. Check the [official Distrobox docs](https://github.com/89luca89/distrobox) for the full list of supported base images.
 
 ---
 
-## Enter Your Container
+## Enter your container
 
 Once the image is downloaded and the container is created, enter it:
 
-> **Note:** The first time you enter a newly created container, Distrobox runs a one-time setup script that may take a few minutes. Subsequent entries will still show progress output but complete in seconds.
+> **Note:** the first time you enter a newly created container, Distrobox runs a one-time setup script that may take a few minutes. Subsequent entries still show progress output but complete in seconds.
 
 ```bash
 distrobox-enter my-devbox
@@ -79,11 +79,11 @@ distrobox-enter my-devbox
 
 Your terminal prompt may change, indicating you're now inside the container. You may also see the container name in your prompt, like `user@my-devbox:/$`. If not, you can check in the next step.
 
-> **Important:** Inside the container, your home directory is automatically mounted and shared with your host system. Files you create here appear on your host, and vice versa.
+> **Important:** inside the container, your home directory is automatically mounted and shared with your host system. Files you create here appear on your host, and vice versa.
 
 ---
 
-## Verify Everything Works
+## Verify everything works
 
 Inside the container, check that it's working properly:
 
@@ -95,7 +95,7 @@ cat /etc/os-release
 ls ~
 ```
 
-`ls ~` will show your host’s home directory contents because Distrobox shares it by default. If you see your usual files, the mount is working.
+`ls ~` shows your host’s home directory contents because Distrobox shares it by default. If you see your usual files, the mount is working.
 
 Now open a new terminal on your host machine and list out your containers:
 
@@ -106,7 +106,7 @@ distrobox list
 
 ---
 
-## Exit and Manage Your Container
+## Exit and manage your container
 
 To exit the container and return to your host, go back to the terminal with your container running and enter:
 
@@ -126,13 +126,13 @@ You're now back on your host system.
 
 ---
 
-## Next Steps
+## Next steps
 
 Now that you have a working container, you can:
 
 - Install development tools inside the container (Node.js, Python, Go, etc.)
 - Create multiple containers for different projects or distributions
-- Export applications so they appear in your system application menu
+- Export apps so they appear in your system app menu
 
 ---
 
