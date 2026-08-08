@@ -1,9 +1,9 @@
 # Retrieving 7‑day weather forecasts using the NOAA API
 
-> **Audience:** developers building applications that require weather data.
-> **Use Case:** retrieve a 7‑day forecast for any U.S. location using latitude and longitude coordinates.
-> **Prerequisites:** `curl` (or your preferred programming language), an internet connection, and a text editor.
-> **Last Updated:** this guide was verified in August 2026 with API endpoints and response structures.
+> **Audience:** developers building applications that require weather data.<br>
+> **Use Case:** retrieve a 7‑day forecast for any U.S. location using latitude and longitude coordinates.<br>
+> **Prerequisites:** `curl` (or your preferred programming language), an internet connection, and a text editor.<br>
+> **Last Updated:** this guide was verified in August 2026 with API endpoints and response structures.<br>
 
 ---
 
@@ -17,6 +17,7 @@ This guide walks you through a two‑step process:
 2. Fetch the forecast for that grid point.
 
 After this guide, you'll be able to:
+
 - Make a valid request to the NWS `/points` endpoint using latitude/longitude
 - Extract the forecast URL from the returned JSON
 - Make a second request to fetch a 7‑day weather forecast

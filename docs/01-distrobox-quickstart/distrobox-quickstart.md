@@ -2,16 +2,17 @@
 
 This guide helps you get started with Distrobox - a powerful tool that creates containerized sandboxes tightly integrated with your host system. Think of it as a lightweight, disposable development environment that feels native on your Linux machine.
 
-> **Audience:** Linux users who want lightweight, disposable development environments without virtual machines.
-> **Use Case:** create and manage containerized sandboxes that integrate seamlessly with your host system.
-> **Prerequisites:** Linux (Ubuntu, Fedora, Arch, or similar), Podman or Docker installed, and `sudo` access.
-> **Last Updated:** this guide was verified in August 2026 with Distrobox 1.8.1.2 and Podman 5.4.2.
+> **Audience:** Linux users who want lightweight, disposable development environments without virtual machines.<br>
+> **Use Case:** create and manage containerized sandboxes that integrate seamlessly with your host system.<br>
+> **Prerequisites:** Linux (Ubuntu, Fedora, Arch, or similar), Podman or Docker installed, and `sudo` access.<br>
+> **Last Updated:** this guide was verified in August 2026 with Distrobox 1.8.1.2 and Podman 5.4.2.<br>
 
 ---
 
 ## Overview
 
 In this guide, you'll learn to:
+
 - Install Distrobox and its dependencies
 - Create your first container
 - Enter and use the container
@@ -59,9 +60,9 @@ distrobox-create --name my-devbox --image ubuntu:latest
 ```
 
 This command:
-- Creates a container named `my-devbox`
-- Uses the latest Ubuntu image as the base
-- This first download **can take several minutes** depending on your internet speed
+- Creates a container named `my-devbox`<br>
+- Uses the latest Ubuntu image as the base<br>
+- This first download **can take several minutes** depending on your internet speed<br>
 
 > **Tip:** if you prefer Fedora or Arch Linux, replace `ubuntu:latest` with `fedora:latest` or `archlinux:latest`. Check the [official Distrobox docs](https://github.com/89luca89/distrobox) for the full list of supported base images.
 
@@ -149,6 +150,7 @@ Now that you have a working container, you can:
 ## Summary
 
 You've successfully:
+
 - Installed Distrobox on your Linux system
 - Created your first container
 - Entered and explored the container environment
